@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CSS Control</title>
+</head>
+<body>
+  <h2>CSS Font and Border Control</h2>
+
+  <!-- Input fields for RGB colors and border width -->
+  <label>R: <input type="number" id="r" min="0" max="255" value="0"></label>
+  <label>G: <input type="number" id="g" min="0" max="255" value="0"></label>
+  <label>B: <input type="number" id="b" min="0" max="255" value="0"></label>
+  <label>Border Width (px): <input type="number" id="borderWidth" min="1" max="20" value="2"></label>
+
+  <!-- Paragraph to style -->
+  <p id="styled-paragraph" style="padding: 10px; border: 2px solid black;">Sample text to style</p>
+
+  <script>
+    const paragraph = document.getElementById('styled-paragraph');
+
+    function updateStyles() {
+      const r = document.getElementById('r').value;
+      const g = document.getElementById('g').value;
+      const b = document.getElementById('b').value;
+      const borderWidth = document.getElementById('borderWidth').value;
+
+      paragraph.style.color = `rgb(${r}, ${g}, ${b})`;
+      paragraph.style.borderColor = `rgb(${r}, ${g}, ${b})`;
+      paragraph.style.borderWidth = `${borderWidth}px`;
+    }
+
+    document.getElementById('r').oninput = updateStyles;
+    document.getElementById('g').oninput = updateStyles;
+    document.getElementById('b').oninput = updateStyles;
+    document.getElementById('borderWidth').oninput = updateStyles;
+  </script>
+</body>
+</html>
+
