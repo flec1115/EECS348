@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basic CSS Control</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file if you have one -->
+  <script src="js/get_element.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
 <body>
   <h2>CSS Font and Border Control</h2>
@@ -15,27 +17,7 @@
   <label>Border Width (px): <input type="number" id="borderWidth" min="1" max="20" value="2"></label>
 
   <!-- Paragraph to style -->
-  <p id="styled-paragraph" style="padding: 10px; border: 2px solid black;">Sample text to style</p>
-
-  <script>
-    const paragraph = document.getElementById('styled-paragraph');
-
-    function updateStyles() {
-      const r = document.getElementById('r').value;
-      const g = document.getElementById('g').value;
-      const b = document.getElementById('b').value;
-      const borderWidth = document.getElementById('borderWidth').value;
-
-      paragraph.style.color = `rgb(${r}, ${g}, ${b})`;
-      paragraph.style.borderColor = `rgb(${r}, ${g}, ${b})`;
-      paragraph.style.borderWidth = `${borderWidth}px`;
-    }
-
-    document.getElementById('r').oninput = updateStyles;
-    document.getElementById('g').oninput = updateStyles;
-    document.getElementById('b').oninput = updateStyles;
-    document.getElementById('borderWidth').oninput = updateStyles;
-  </script>
+  <p id="styled-paragraph" style="padding: 10px; border: 2px solid black;"> "If I'm an advocate for anything, it's to move. As far as you can, as much as you can. Across the ocean, or simply across the river. The extent to which you can walk in someone else's shoes or at least eat their food, it's a plus for everybody. Open your mind, get up off the couch, move." - Anthony Bourdain</p>
 </body>
 </html>
 
